@@ -1,22 +1,13 @@
-/* =====================================================================
- * PROFILE.JS — SATU-SATUNYA FILE YANG PERLU KAMU EDIT UNTUK ISI PORTOFOLIO
- * ---------------------------------------------------------------------
- * [UBAH] Sebelumnya data pribadi (nama, link, email, IG, proyek) tersebar
- *        hard-coded di 5 file berbeda, dan sebagian masih milik pembuat
- *        template asli (@ffaneto__, misteryshadbr@gmail.com, repo ffaneto/*).
- *        Sekarang semuanya dikumpulkan di sini.
- * Bagian bertanda  TODO  = isi dengan data aslimu.
- * ===================================================================== */
+/* Profile Pengaturan Buat Edit Lebih Cepat Maintenance Dan Tidak Lupa */
 
 export const profile = {
   name: "Alpanza Triadie",
-  nameTag: ["Alpanza", "Triadie"],          // teks miring di pojok menu utama
+  nameTag: ["Alpanza", "Triadie"],
   age: 18,
   location: "Indonesia",
   school: "SMK Putra Pakuan",
   major: "IT Network Engineer (TKJT)",
-  github: "Panz-08",                         // username GitHub
-  // TODO: ganti dengan email & Instagram aslimu (yang lama milik template asli)
+  github: "Panz-08",
   email: "astrapanz08@gmail.com",
   instagram: "panza_08",
 };
@@ -33,7 +24,7 @@ export const MENU = [
 
 /* HALAMAN ABOUT ME — 3 bar, tiap bar punya panel info saat diklik/ditap.
  * photo: null = tanpa foto. Kalau mau foto, taruh file di /public/images/
- *        lalu isi mis. "/images/me.webp" (disarankan lebar ≤ 700px, .webp) */
+ *        lalu isi mis. "/images/me.webp" (aku nyaranin lebar ≤ 700px, .webp + dll) */
 export const ABOUT = [
   { id: "me", label: "ABOUT ME", photo: null,
     upper: [`name: ${profile.name}`, `age: ${profile.age} years`, `location: ${profile.location}`],
@@ -62,11 +53,11 @@ export const RESUME = [
     bullets: ["Always learning, always building."] },
 ];
 
-/* SIDE PROJECTS — TODO: ganti dengan repo asli milikmu!
- * (Link lama mengarah ke repo template asli ffaneto/*, sudah dihapus.) */
+/* SIDE PROJECTS Bisa Ditambahkan */
 export const PROJECTS = [
   { title: "PORTFOLIO SITE", stack: "React", summary: "This Persona 5 themed portfolio website.", href: `https://github.com/Panz-08/Porto-Panz08` },
   { title: "Static Web School", stack: "Static Web", summary: "IDK", href: `https://github.com/Panz-08/Web-Sekolah` },
+  { title: "PROJECT NAME 3", stack: "Java", summary: "TODO: tulis deskripsi singkat proyekmu.", href: `https://github.com/${profile.github}` },
   { title: "PROJECT NAME 3", stack: "Java", summary: "TODO: tulis deskripsi singkat proyekmu.", href: `https://github.com/${profile.github}` },
 ];
 
