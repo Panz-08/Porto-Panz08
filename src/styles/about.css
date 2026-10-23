@@ -1,0 +1,41 @@
+/* ABOUT.CSS — panel "reveal".
+ * [UBAH] Dulu panel putih raksasa 88vw × 60vh diputar -20° dengan px tetap →
+ * keluar layar di HP. Sekarang lebar min(92vw, 760px), rotasi kecil, tinggi
+ * mengikuti isi teks (teks panjang tidak terpotong lagi). */
+.about .bars { margin-top: 4vh; }
+
+.reveal {
+  position: fixed; inset: 0; z-index: 70; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 18px;
+  padding: 16px; background: rgba(13,13,13,.78); animation: fade .25s ease-out; overflow: hidden;
+}
+@keyframes fade { from { opacity: 0; } }
+.reveal-photo { position: absolute; right: 0; top: 0; height: 100%; width: min(60vw, 480px); object-fit: cover; object-position: top; opacity: .3; pointer-events: none; }
+
+.reveal-nav { position: relative; z-index: 2; display: flex; align-items: center; gap: clamp(10px, 3vw, 28px); font-size: clamp(22px, 5vw, 44px); transform: rotate(-4deg); }
+.reveal-nav button { min-width: 64px; min-height: 48px; color: #fff; -webkit-text-stroke: 2px #0d0d0d; paint-order: stroke fill; font-size: inherit; }
+.reveal-nav button:hover { color: var(--p5-red); }
+.reveal-nav span { color: var(--p5-red); letter-spacing: 3px; -webkit-text-stroke: 2px #fff; paint-order: stroke fill; }
+
+.reveal-card {
+  position: relative; z-index: 2; width: min(92vw, 760px); padding: 14px 14px 16px; background: #fff;
+  clip-path: polygon(0 0, 100% 0, calc(100% - 28px) 100%, 0 100%); border-top: 8px solid var(--p5-red);
+  transform: rotate(-4deg); animation: card-in .4s cubic-bezier(.22, 1, .36, 1);
+  filter: drop-shadow(14px 10px 0 rgba(217,35,35,.85));
+}
+@media (hover: none) { .reveal-card { filter: none; box-shadow: 8px 8px 0 rgba(217,35,35,.85); } } /* drop-shadow filter = berat di HP */
+@keyframes card-in { from { opacity: 0; transform: translateX(-60px) rotate(-12deg); } }
+.reveal-upper {
+  display: flex; flex-direction: column; align-items: center; gap: 8px; padding: clamp(16px, 4vw, 28px) 16px;
+  background: rgba(13,13,13,.94); clip-path: polygon(0 0, 100% 0, calc(100% - 20px) 100%, 0 100%); text-align: center;
+}
+.reveal-upper p { font-size: clamp(16px, 3.8vw, 24px); letter-spacing: .5px; line-height: 1.2; overflow-wrap: anywhere; }
+.reveal-lower {
+  margin: 12px 0 0 auto; width: min(100%, 520px); padding: 12px 20px; background: rgba(13,13,13,.94);
+  clip-path: polygon(0 0, 100% 0, calc(100% - 20px) 100%, 0 100%);
+  font-family: var(--font-body); font-size: clamp(16px, 3.6vw, 24px); text-transform: lowercase; overflow-wrap: anywhere;
+}
+.reveal-close {
+  position: relative; z-index: 2; min-height: 44px; padding: 0 24px; background: #0d0d0d; border: 2px solid #fff; letter-spacing: 2px;
+  clip-path: polygon(0 0, 100% 0, calc(100% - 12px) 100%, 0 100%);
+}
+.reveal-close:hover { background: var(--p5-red); }

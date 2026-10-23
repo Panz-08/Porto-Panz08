@@ -1,0 +1,47 @@
+/* BARS.CSS — bar hitam miring (About & Socials).
+ * [UBAH] Lebar dulu 45vw + tinggi px tetap + posisi absolut → di HP bar
+ * tumpang tindih/terpotong. Sekarang lebar fleksibel & tinggi pakai clamp. */
+.bars { --h: clamp(56px, 9vh, 72px); display: flex; flex-direction: column; gap: 8px; width: min(100%, 560px); }
+.bar { position: relative; animation: bar-in .5s cubic-bezier(.22, 1, .36, 1) both; animation-delay: calc(var(--i) * 80ms); }
+@keyframes bar-in { from { transform: translateX(-100%); opacity: 0; } to { transform: none; opacity: 1; } }
+
+.bar-btn {
+  position: relative; display: flex; align-items: center; width: 100%;
+  height: var(--h); background: #111; text-align: left; overflow: hidden;
+  clip-path: polygon(0 0, 100% 0, calc(100% - 14px) 100%, 0 100%);
+  transition: height .25s cubic-bezier(.22, 1, .36, 1);
+}
+.bar.active .bar-btn { height: calc(var(--h) * 1.3); }
+.bar::before { /* garis merah di bawah bar aktif */
+  content: ""; position: absolute; left: 0; right: 14px; top: 0; bottom: -6px; background: var(--p5-red);
+  opacity: 0; transition: opacity .2s; clip-path: polygon(40% 0, 100% 0, 100% 100%, 38% 100%);
+}
+.bar.active::before { opacity: 1; }
+
+.bar-fill { /* blok putih yang meluncur masuk saat aktif */
+  position: absolute; inset: 0; background: #fff;
+  clip-path: polygon(100% 0, 100% 0, calc(100% - 32px) 100%, calc(100% - 32px) 100%);
+  transition: clip-path .35s cubic-bezier(.22, 1, .36, 1);
+}
+.bar.active .bar-fill { clip-path: polygon(34% 0, 100% 0, calc(100% - 14px) 100%, calc(34% + 40px) 100%); }
+
+.bar-char {
+  position: absolute; left: 0; top: 0; height: 100%; width: 38%; object-fit: cover; object-position: top;
+  clip-path: polygon(20px 0, 100% 0, calc(100% - 20px) 100%, 0 100%); pointer-events: none;
+}
+.bar-role {
+  position: relative; z-index: 2; margin-left: 4px; font-size: clamp(18px, 3.6vw, 30px);
+  transform: rotate(-30deg); color: var(--p5-red); letter-spacing: -1px;
+}
+.bar-label {
+  position: relative; z-index: 2; margin-left: auto; margin-right: clamp(26px, 5vw, 44px);
+  font-size: clamp(18px, 4.6vw, 28px); letter-spacing: 3px; color: rgba(255,255,255,.9); transition: color .2s;
+}
+.bar.active .bar-label { color: var(--p5-black); }
+.bar-stats { display: none; }
+@media (min-width: 821px) {
+  .bar-stats { position: absolute; z-index: 2; right: 26px; top: 6px; display: flex; gap: 10px; font-size: 11px; color: var(--p5-black); }
+  .bar:not(.active) .bar-stats { color: #fff; }
+  .bar-stats b { font-weight: normal; font-size: 18px; font-style: italic; margin-left: 4px; }
+  .bar-label { margin-top: 18px; }
+}

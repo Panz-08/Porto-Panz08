@@ -1,0 +1,16 @@
+/* SOCIALS.CSS — bar (lihat bars.css) + daftar link */
+.socials-grid { display: grid; gap: 22px; margin-top: 3vh; }
+@media (min-width: 821px) { .socials-grid { grid-template-columns: minmax(380px, 1fr) minmax(320px, 1fr); gap: 4vw; align-items: start; } }
+.info-list { display: flex; flex-direction: column; gap: 10px; }
+.info-list li { animation: info-in .35s cubic-bezier(.22, 1, .36, 1) both; animation-delay: calc(var(--i) * 60ms); }
+@keyframes info-in { from { opacity: 0; transform: translateX(40px); } }
+.info-bar {
+  position: relative; display: flex; align-items: center; gap: 12px; min-height: 52px; padding: 8px 16px;
+  background: #0d0d0d; border-left: 6px solid var(--p5-red);
+  clip-path: polygon(0 0, 100% 0, calc(100% - 14px) 100%, 0 100%);
+}
+.info-bar:hover, .info-bar:focus-visible { background: #fff; color: #0d0d0d; }
+.info-new { position: absolute; top: -10px; left: -6px; width: 56px; height: auto; pointer-events: none; z-index: 2; }
+.info-icon { width: 30px; height: auto; margin-left: 40px; flex-shrink: 0; }
+.info-text { flex: 1; min-width: 0; font-family: var(--font-body); font-size: clamp(18px, 4.4vw, 26px); letter-spacing: .5px; overflow-wrap: anywhere; }
+.info-tag { font-size: 13px; letter-spacing: 1.5px; padding: 2px 8px; background: var(--p5-red); color: #fff; }
