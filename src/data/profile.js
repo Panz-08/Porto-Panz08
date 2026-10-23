@@ -66,7 +66,7 @@ export const RESUME = [
  * (Link lama mengarah ke repo template asli ffaneto/*, sudah dihapus.) */
 export const PROJECTS = [
   { title: "PORTFOLIO SITE", stack: "React", summary: "This Persona 5 themed portfolio website.", href: `https://github.com/Panz-08/Porto-Panz08` },
-  { title: "PROJECT NAME 2", stack: "PHP", summary: "TODO: tulis deskripsi singkat proyekmu.", href: `https://github.com/${profile.github}` },
+  { title: "PROJECT NAME 2", stack: "Static Web", summary: "IDK", href: `https://github.com/Panz-08/Web-Sekolah` },
   { title: "PROJECT NAME 3", stack: "Java", summary: "TODO: tulis deskripsi singkat proyekmu.", href: `https://github.com/${profile.github}` },
 ];
 
