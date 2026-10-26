@@ -57,7 +57,7 @@ export const RESUME = [
 export const PROJECTS = [
   { title: "PORTFOLIO SITE", stack: "React", summary: "This Persona 5 themed portfolio website.", href: `https://github.com/Panz-08/Porto-Panz08` },
   { title: "Static Web School", stack: "Static Web", summary: "IDK", href: `https://github.com/Panz-08/Web-Sekolah` },
-  { title: "PORTO SIMPLE", stack: "TypeScript", summary: "TODO: tulis deskripsi singkat proyekmu.", href: `https://github.com/Porto-Simple${profile.github}` },
+  { title: "PORTO SIMPLE", stack: "TypeScript", summary: "TODO: tulis deskripsi singkat proyekmu.", href: `https://github.com/Panz-08/Porto-Simple${profile.github}` },
   { title: "PROJECT NAME 3", stack: "Java", summary: "TODO: tulis deskripsi singkat proyekmu.", href: `https://github.com/${profile.github}` },
 ];
 
