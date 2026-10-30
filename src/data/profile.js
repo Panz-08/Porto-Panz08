@@ -59,13 +59,16 @@ export const PROJECTS = [
   { title: "Static Web School", stack: "Static Web", summary: "IDK", href: `https://github.com/Panz-08/Web-Sekolah` },
   { title: "PORTO SIMPLE", stack: "TypeScript", summary: "Porto simple", href: `https://github.com/Panz-08/Porto-Simple` },
   { title: "Web Game Strategy", stack: "Game Development", summary: "Web-Based Game Strategy In Web", href: `https://github.com/Panz-08/Web-Based-Strategy-Game` },
+  { title: "API Streaming Anime", stack: "API", summary: "API Streaming Scrapper For Web Streaming", href: `https://anime-streaming-api-panzy.vercel.app/` },
+  { title: "Web Streaming Anime", stack: "Static Web", summary: "Tidak Bisa Dipakai di Online Tapi Bisa Dipakai di Offline", href: `https://anime-streaming-omega-ten.vercel.app/` },
 ];
 
 /* SOCIALS — 3 bar; "links" = tautan di panel kanan. */
 export const SOCIALS = [
   { id: "github", label: "GITHUB", role: "LEADER", handle: `@${profile.github}`,
     stats: [["USR", profile.github], ["TOP", "PROJECTS"]],
-    links: [{ text: `github.com/${profile.github}`, tag: "REPOS", href: `https://github.com/${profile.github}?tab=repositories` }] },
+    links: [{ text: `github.com/${profile.github}`, tag: "REPOS", href: `https://github.com/${profile.github}?tab=repositories` }], 
+    links: [{ text: `github.com/${profile.github}`, tag: "REPOS", href: `https://github.com/${profile.github}?tab=web-based-strategy-game` }] },
   { id: "instagram", label: "INSTAGRAM", role: "PARTY", handle: `@${profile.instagram}`,
     stats: [["SOCIAL", "PICS"], ["MIND", "LIFE"]],
     links: [{ text: `instagram.com/${profile.instagram}`, tag: "POSTS", href: `https://instagram.com/${profile.instagram}` }] },
