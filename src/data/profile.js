@@ -68,7 +68,7 @@ export const SOCIALS = [
   { id: "github", label: "GITHUB", role: "LEADER", handle: `@${profile.github}`,
     stats: [["USR", profile.github], ["TOP", "PROJECTS"]],
     links: [{ text: `github.com/${profile.github}`, tag: "REPOS", href: `https://github.com/${profile.github}?tab=repositories` }], 
-    links: [{ text: `github.com/${profile.github}`, tag: "REPOS", href: `https://github.com/${profile.github}?tab=web-based-strategy-game` }] },
+    links: [{ text: `github.com/${profile.github}`, tag: "REPOS", href: `https://github.com/panz-08/web-based-strategy-game` }] },
   { id: "instagram", label: "INSTAGRAM", role: "PARTY", handle: `@${profile.instagram}`,
     stats: [["SOCIAL", "PICS"], ["MIND", "LIFE"]],
     links: [{ text: `instagram.com/${profile.instagram}`, tag: "POSTS", href: `https://instagram.com/${profile.instagram}` }] },
